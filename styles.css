@@ -1,0 +1,12 @@
+body {
+  font-weight: lighter;
+}
+#municipios {
+  font-weight: lighter;
+}
+
+#table-body > tr > th,
+#log,
+#lat {
+  color: gray;
+}

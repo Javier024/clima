@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+  <head>
+  
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="lib/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="lib/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<!-- Referencia a jQuery Mobile JS -->
+
+
+
+<script src="main.js"></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="geo.js"></script>
+    
+    
+    <title>El clima</title>
+
+   
+   
+  <body style="padding: 20px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+
+
+    
+    <section class="container-xl row m-auto mb-5 border p-2">
+      <div class="col d-flex flex-column flex-grow-1 justify-content-start gap-3">
+        <h1>Localización y clima</h1>
+        <p>Departamento de Córdoba</p>
+        <form class="d-grid gap-4">
+          <label class="d-grid gap-2">
+            Municipios:
+            <select class="form-select w-50" aria-label="Default select example" id="municipios">
+              <option selected disabled>Open this select menu</option>
+            </select>
+          </label>
+          <input class="btn btn-primary w-25" id="button-form" type="submit" value="Buscar" />
+
+          
+        </form>
+
+        <table class="table w-50" id="table-coordenadas" hidden>
+          <thead>
+            <tr>
+              <th scope="col">Longitud</th>
+              <th scope="col">Latitud</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th id="log"></th>
+              <th id="lat"></th>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div id="map" class="col" style="width: 50%; aspect-ratio: calc(16 / 9); margin: auto"></div>
+    </section>
+
+    <section class="container-xl">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Item.</th>
+            <th scope="col">Campo</th>
+            <th scope="col">Descripción</th>
+          </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+      </table>
+    </section>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    
+  </body>
+</html>
